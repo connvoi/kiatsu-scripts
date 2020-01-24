@@ -4,7 +4,10 @@ host=`hostname`
 
 if [ $host = "connvoidev"  ]
 then
-    echo "connvoi"
+    #echo "connvoi"
+    cd /home/kyagi/project/kiatsu/kiatsu-scripts/bin
 else
-    echo "others"
+    cd /Users/kyagi/Project/connvoi-service/kiatsu-scripts
 fi
+
+./kiatsu.sh
