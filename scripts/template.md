@@ -24,13 +24,13 @@ layout: default
         <!--Table head-->
         <thead>
           <tr>
-            <th class="th-lg">
+            <th class="th-lg text-center">
               日付
             </th>
-            <th class="th-lg">
+            <th class="th-lg text-center">
               気圧
             </th>
-            <th class="th-lg">
+            <th class="th-lg text-center">
               天気/気温
             </th>
           </tr>
@@ -39,10 +39,10 @@ layout: default
 
         <!--Table body-->
         <tbody>
-        {% for item in site.data.weather %}
+        {% for item in site.data.city.###cityid### %}
           <tr>
-            <td><p>{{ item.time }}時</p></td>
-            <td><p>{{ item.main.pressure }} hpa</p></td>
+            <td><p class="font-weight-bolder text-center">{{ item.day }}</p><p class="font-weight-bolder text-center">{{ item.hour }}時</td>
+            <td><p class="font-weight-bolder text-center">{{ item.main.pressure }} hpa</p></td>
             <td>
                 <img src="{{ item.weather.icon }}" alt="{{ item.weather.description}}" class="img-thumbnail"
   style="width:50px;">

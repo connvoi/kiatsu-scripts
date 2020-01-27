@@ -27,7 +27,6 @@ class Parse:
             res['day'] = jst.strftime("%m/%d")
             res['hour'] = jst.strftime("%H")
 
-            #array.pushに変更する。
             result.append(res)
 
         #return json.dump(result, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
