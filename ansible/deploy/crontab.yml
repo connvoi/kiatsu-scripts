@@ -1,0 +1,8 @@
+- hosts: [ dev ]
+  become: yes
+  tasks: 
+    - cron: 
+        name: "update kiatsu"
+        job: "/home/kyagi/project/kiatsu/kiatsu-scripts/bin/update.sh 2&>1 > /home/kyagi/project/kiatsu/log/kiatsu.log"
+        minute: "0"
+        state: present
