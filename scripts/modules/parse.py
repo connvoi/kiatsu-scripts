@@ -9,7 +9,7 @@ class Parse:
         for i,v in d[0].items():
             w[i] = v
 
-        w['icon']='http://openweathermap.org/img/wn/' + str(w['icon']) +'@2x.png'
+        w['icon']='https://openweathermap.org/img/wn/' + str(w['icon']) +'@2x.png'
         return w
 
 
