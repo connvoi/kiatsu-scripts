@@ -5,12 +5,14 @@ host=`hostname`
 if [ $host = "connvoidev"  ]
 then
     #echo "connvoi"
-    source /home/kyagi/pyenv/dev/bin/activate
-    cd /home/kyagi/project/kiatsu/kiatsu-scripts/bin
+    activate=/home/kyagi/pyenv/dev/bin/activate
+    home=/home/kyagi/project/kiatsu
 else
-    source /Users/kyagi/Project/pyenv/data/bin/activate
-    cd /Users/kyagi/Project/connvoi-service/kiatsu-scripts/bin
+    activate=/Users/kyagi/Project/pyenv/data/bin/activate
+    home=/Users/kyagi/Project/connvoi-service/
 fi
 
-./kiatsu.sh
-deactivate
+htmlhome=$home/kiatsu-jykell
+scriptshome=$home/kiatsu-scripts
+bindir=$scriptshome/bin
+scriptsdir=$scriptshome/scripts

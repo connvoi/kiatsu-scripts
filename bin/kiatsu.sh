@@ -1,16 +1,25 @@
 #!/bin/bash +x
 
-cd ../scripts
+. ./update.sh
+
+source $activate
+
+cd $htmlhome
+echo $htmlhome
+git pull origin master
+
+cd $scriptsdir
 
 #update citydata
 python mk_cityjson.py
-cp ../data/city/* ../../kiatsu-jykell/_data/city/
+cp $scriptshome/data/city/* $htmlhome/_data/city/
 
 #cityのhtmlの作成(普段はやらなくてよい。)
 python mk_citypage.py
-cp ../html/city/* ../../kiatsu-jykell/city/
+cp $scriptshome/html/city/* $htmlhome/city/
 
-cd ../../kiatsu-jykell/
+cd $htmlhome
 git add .
 git commit -m "updated"
 git push origin master
+deactivate
