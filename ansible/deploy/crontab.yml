@@ -4,6 +4,6 @@
     tasks: 
         - cron: 
             name: "update kiatsu"
-            job: "/home/kyagi/project/kiatsu/kiatsu-scripts/bin/kiatsu.sh 2>&1 >> /home/kyagi/project/kiatsu/log/kiatsu.log"
+            job: "/home/kyagi/project/kiatsu/kiatsu-scripts/bin/kiatsu.sh >> /home/kyagi/project/kiatsu/log/kiatsu.log 2>&1"
             minute: "0"
             state: present
